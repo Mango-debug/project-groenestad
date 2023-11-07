@@ -1,0 +1,119 @@
+@media only screen and (min-width: 375px) and (min-height: 812px)
+{ 
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: minionVariableConcept;
+        src: url(assets/fonts/Minion\ Variable\ Concept.otf);
+      }
+      @font-face {
+        font-family: whitneyBook;
+        src: url(assets/fonts/whitneybook.otf);
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #0F3C37;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+      
+      li {
+        list-style: none;
+      }
+      /* navigatie */
+      .navbar {
+        font-family: minionVariableConcept;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2px;
+      }
+      .nav-links a {
+        color: #F5EFED;
+        letter-spacing: 5px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 1em;
+        font-size: 15px;
+      }
+      .nav-links li {
+        padding: 5px 14px;
+        align-self: center;
+      }
+      /* logo */
+      .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* background */
+      .backimg{
+        position: absolute;
+        z-index: -1;
+        top: 80px;
+      }
+      /* main */
+      main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      /* tekst */
+      article{
+        color: #F5EFED;
+        letter-spacing: 5px;
+        text-align: center;
+        position: relative;
+        top: 2em;
+      }
+      p{
+        font-family: whitneyBook;
+        position: relative;
+        top: 2em;
+        font-size: .9em;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-bottom: 2em;
+      }
+      /* button */
+      .infoButton{
+        display: flex;
+        text-decoration: none;
+        position: relative;
+        bottom: -100px;
+      }
+      .infoButton button{
+        font-family: minionVariableConcept;
+        cursor: pointer; 
+        border: 2px solid #F5EFED; 
+        border-radius: 25px;
+        background-color: transparent; 
+        height: 40px; 
+        width: 250px; 
+        color: #F5EFED; 
+        font-size: 1.2em; 
+      }
+      .infoButton button:focus{
+        color: #0F3C37;
+        background-color: #F5EFED;
+      }
+      /* footer */
+      footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #F5EFED;
+        background: rgba(204, 204, 204, 0.5);
+      }
+
+}
