@@ -76,17 +76,21 @@
         position: relative;
         top: 2em;
       }
+      .paragraph{
+        margin-left: 1em;
+        margin-right: 1em;
+      }
       p{
         font-family: whitneyBook;
         position: relative;
         top: 2em;
         font-size: .9em;
-        margin-left: 1em;
-        margin-right: 1em;
         padding-bottom: 1em;
       }
       .extraText{
         display: none;
+        margin-left: 1em;
+        margin-right: 1em;
       }      
       input[type="checkbox"]{
         height: 2em;
