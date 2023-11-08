@@ -83,7 +83,40 @@
         font-size: .9em;
         margin-left: 1em;
         margin-right: 1em;
-        padding-bottom: 2em;
+        padding-bottom: 1em;
+      }
+      .extraText{
+        display: none;
+      }      
+      input[type="checkbox"]{
+        height: 2em;
+        display: block;
+        appearance: none;
+      }
+      label{
+        position: relative;
+        font-family: minionVariableConcept;
+        cursor: pointer; 
+        border: 2px solid #F5EFED; 
+        border-radius: 25px;
+        background-color: transparent; 
+        height: 10px; 
+        width: 50px; 
+        color: #F5EFED; 
+        font-size: .5em; 
+      }
+      /* read more/less button */
+      label:before{
+        content: "Read More";
+      }
+      input[type="checkbox"]:checked ~ label:before{
+        content: "Read Less";
+      }
+      .extraText:has(~input[type="checkbox"]:checked){
+        display: inline;
+      }
+      .logo:has(~input[type="checkbox"]:checked){
+        display: none;
       }
       /* button */
       .infoButton{
