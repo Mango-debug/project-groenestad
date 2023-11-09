@@ -20,7 +20,9 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        margin: 0;
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
         background-color: #0F3C37;
       }
       
@@ -308,9 +310,8 @@
         display: none;
       }
       /* music player */
-      .musicEmbed{
+      .musicEmbed iframe{
         margin-top: 1em;
-        padding-top: 1em;
         border-top: 2px solid #F5EFED;
         width: 350px;
       }
@@ -320,6 +321,15 @@
         bottom: 0;
         width: 100%;
         color: #F5EFED;
+        background: rgba(204, 204, 204, 0.5);
+        font-size: .7em;
+        padding-bottom: 1em;
+      }
+      .infoFooter{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #0F3C37;
         background: rgba(204, 204, 204, 0.5);
         font-size: .7em;
         padding-bottom: 1em;
