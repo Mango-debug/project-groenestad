@@ -40,6 +40,7 @@
       .nav-links a {
         color: #F5EFED;
         letter-spacing: 5px;
+        font-size: .8em;
       }
       .nav-links {
         display: flex;
@@ -47,7 +48,7 @@
         font-size: 15px;
       }
       .nav-links li {
-        padding: 5px 14px;
+        padding: 5px 5px;
         align-self: center;
       }
       /* logo */
@@ -76,21 +77,19 @@
         position: relative;
         top: 2em;
       }
-      .paragraph{
+      .mainText, .extraText{
         margin-left: 1em;
         margin-right: 1em;
+        font-size: .9em;
       }
       p{
         font-family: whitneyBook;
         position: relative;
         top: 2em;
-        font-size: .9em;
         padding-bottom: 1em;
       }
       .extraText{
         display: none;
-        margin-left: 1em;
-        margin-right: 1em;
       }      
       input[type="checkbox"]{
         height: 2em;
@@ -99,15 +98,16 @@
       }
       label{
         position: relative;
+        top: 10px;
         font-family: minionVariableConcept;
         cursor: pointer; 
         border: 2px solid #F5EFED; 
         border-radius: 25px;
         background-color: transparent; 
-        height: 10px; 
-        width: 50px; 
+        height: 15px; 
+        width: 60px; 
         color: #F5EFED; 
-        font-size: .5em; 
+        font-size: .7em; 
       }
       /* read more/less button */
       label:before{
@@ -119,30 +119,197 @@
       .extraText:has(~input[type="checkbox"]:checked){
         display: inline;
       }
-      .logo:has(~input[type="checkbox"]:checked){
-        display: none;
-      }
-      /* button */
-      .infoButton{
+      /* info button */
+      .infoButton a{
         display: flex;
         text-decoration: none;
-        position: relative;
-        bottom: -100px;
       }
-      .infoButton button{
+      .infoButton{
         font-family: minionVariableConcept;
         cursor: pointer; 
         border: 2px solid #F5EFED; 
+        color: #F5EFED;
         border-radius: 25px;
         background-color: transparent; 
         height: 40px; 
         width: 250px; 
-        color: #F5EFED; 
         font-size: 1.2em; 
+        position: relative;
+        bottom: -100px;
       }
       .infoButton button:focus{
         color: #0F3C37;
         background-color: #F5EFED;
+      }
+      /* infopagina */
+      .infoText h4{
+        font-family: minionVariableConcept;
+        letter-spacing: 5px;
+      }
+      .infoText p{
+        font-size: .9em;
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+      .infoLogo{
+        max-height: 300px;
+      }
+      .witscherm{
+        display: flex;
+        flex-direction: column;
+        color: #0F3C37;
+        background-color: #F5EFED;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 100px;
+      }
+      .witscherm h4{
+        font-family: minionVariableConcept;
+        letter-spacing: 5px;
+        padding: 1em;
+      }
+      .witscherm h5{
+        font-family: whitneyBook;
+        font-size: large;
+        top: 1em;
+        padding-bottom: 1em;
+        letter-spacing: 5px;
+        text-align: center;
+        position: relative;
+        font-size: .9em;
+      }
+      .tijden{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
+        align-items: center;
+      }
+      .contact{
+        margin-bottom: 4em;
+      }
+      .map{
+        border: 2px solid #0F3C37;
+      }
+      .map iframe{
+        max-width: 330px;
+      }
+      /* discover page */
+      .discoverLogo{
+        width: 180px;
+      }
+      .discoverMain h4{
+        font-family: minionVariableConcept;
+        letter-spacing: 5px;
+        color: #F5EFED;
+      }
+      .discoverMain p{
+        color: #F5EFED;
+        font-family: whitneyBook;
+        font-size: .9em;
+        padding-left: 1em;
+        padding-right: 1em;
+        letter-spacing: 5px;
+        text-align: center;
+        position: relative;
+      }
+      i {
+        position: relative;
+        display: block;
+        width: 370px;
+        height: 250px;
+        overflow: hidden;
+        margin-top: 2em;
+      }
+      
+      .discoverMain i:before, i:after {
+        content: '⥪';
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        z-index: 2;
+        width: 2rem;
+        height: 2rem;
+        background: #F5EFED;
+        color: #0F3C37;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+      }
+      
+      .discoverMain i:after {
+        content: '⥭';
+        left: auto;
+        right: 1rem;
+      }
+      .discoverMain input {
+        appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: translateX(100%);
+        transition: transform ease-in-out 400ms;
+        z-index: 1;
+      }
+      
+      .discoverMain input:focus {
+        outline: none;
+      }
+      
+      .discoverMain input:after {
+        content: attr(title);
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        padding: .5rem;
+        font-size: 1rem;
+      }
+      
+      .discoverMain input:not(checked):before {
+        content: '';
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        top: 50%;
+        left: calc(-100% + 1rem);
+      }
+      
+      .discoverMain input:checked:before {
+        display: none;
+        left: 1rem;
+      }
+      
+      .discoverMain input:checked {
+        transform: translateX(0);
+        z-index: 0;
+        box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+      }
+      
+      .discoverMain input:checked + input:before {
+        left: -3rem;
+      }
+      
+      .discoverMain input:checked + input ~ input:before {
+        display: none;
+      }
+      /* music player */
+      .musicEmbed{
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 2px solid #F5EFED;
+        width: 350px;
       }
       /* footer */
       footer{
@@ -151,6 +318,8 @@
         width: 100%;
         color: #F5EFED;
         background: rgba(204, 204, 204, 0.5);
+        font-size: .7em;
+        padding-bottom: 1em;
       }
 
 }
