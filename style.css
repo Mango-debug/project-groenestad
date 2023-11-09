@@ -1,3 +1,5 @@
+/* 0.08g of CO2 en cleaner than 92% of tested web pages*/
+
 @media only screen and (min-width: 375px) and (min-height: 812px)
 { 
 
@@ -213,6 +215,7 @@
         text-align: center;
         position: relative;
       }
+      /* Grootendeels van online */
       i {
         position: relative;
         display: block;
